@@ -1,4 +1,12 @@
 <?php
+/**
+ * This is a sample script to connect and perform analysis.
+ * @package phpDAVIDws
+ * @date 2015-02-01
+ * @author Aziz Khan
+ * @version 1.0
+*/
+
 //this will load all the necessary classes.
 require 'phpDAVIDws/autoload.php';
 
