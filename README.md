@@ -14,8 +14,13 @@ But, currently there is no PHP based client is available to access the DAVID web
 Hence we developed a class-based PHP interface to DAVID-WS.
 
 ## Installation
+To install, simply download phpDAVIDws and include the autoload.php to where you want to use the service. 
 
+```php
 
+require 'phpDAVIDws/autoload.php';
+
+```
 ## How to use
 Users are required to register before using this service If you are a new user, please register at http://david.abcc.ncifcrf.gov/webservice/register.htm. 
      
@@ -30,10 +35,10 @@ $request = new authenticate($email);
 //it will return a authenticateResponse object
 $response = $service->authenticate($request);
 
-if($response->getReturn() == "true")
-	{
+if($response->getReturn() == "true"){
 	//perform anaotation
-}else{
+}
+else{
 	//Register or check your email.
 }
 
