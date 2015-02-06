@@ -1,18 +1,20 @@
 <?php
-
+//this will load all the necessary classes.
 require 'phpDAVIDws/autoload.php';
 
-// A class will generated representing the service.
-// It is named after the element in the WSDL and has a method for each operation.
+//A class will generated representing the service.
 $service = new DAVIDWebService();
-$email = "khana10@mails.tsinghua.edu.cn";
-#$request = new \authenticate(array("email"=>"$email"));
+//email address which you used to register on DAVID website.
+$email = "yourname@yourorganization.org";
+
+#create an object of parameters
 $request = new authenticate($email);
 
+//call the authenticate function
 //it will return a authenticateResponse object
 $response = $service->authenticate($request);
 
-
+//check the response [true or flase]
 if($response->getReturn() == "true")
 {
 	echo "Authentication completed\n";
