@@ -34,7 +34,7 @@
   loadTesting (used by DAVID team; arguments include userName, reportTypes, listName, listType, idType, inputIds)
  */
 
-class DAVIDWebService extends \SoapClient
+class DAVIDWebService extends SoapClient
 {
 
     /**
