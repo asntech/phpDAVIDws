@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>phpDAVIDws by asntech</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">phpDAVIDws</h1>
+        <p class="header">A class-based PHP platform for DAVID web services</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/asntech/phpDAVIDws/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/asntech/phpDAVIDws/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/asntech/phpDAVIDws">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/asntech">asntech</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a id="phpdavidws" class="anchor" href="#phpdavidws" aria-hidden="true"><span class="octicon octicon-link"></span></a>phpDAVIDws</h1>
+
+<p>A class-based PHP platform for DAVID web services</p>
+
+<p>Functional annotation is one of the fundamental step in downstream analysis in genomics and proteomics to give biological meaning to genes and proteins. 
+DAVID (database for annotation, visualization and integrated discovery), 
+is a web-based bioinformatics platform (<a href="http://david.abcc.ncifcrf.gov">http://david.abcc.ncifcrf.gov</a>), 
+that provides  tools for functional interpretation of large lists of genes/proteins (Huang et al., 2009).</p>
+
+<p>Recently, DAVID team developed a web service interface by giving a full control over all its functionalities (Jiao et al., 2012). 
+To connect and communicate with the David web service we need a client developed in a programming language of interest. 
+Some clients have been already made available including; Python, Perl, Matlab, Java (  Jiao et al., 2012) and R (ref). 
+PHP is one of most used web development programming language to develop online bioinformatics tools and a databases. 
+But, currently there is no PHP based client is available to access the DAVID web services. 
+Hence we developed a class-based PHP interface to DAVID-WS.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>To install, simply download phpDAVIDws and include the autoload.php to where you want to use the service. </p>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"></span>
+<span class="pl-s2"><span class="pl-k">require</span> <span class="pl-s1"><span class="pl-pds">'</span>phpDAVIDws/autoload.php<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s2"></span></pre></div>
+
+<h2>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use</h2>
+
+<p>Users are required to register before using this service If you are a new user, please register at <a href="http://david.abcc.ncifcrf.gov/webservice/register.htm">http://david.abcc.ncifcrf.gov/webservice/register.htm</a>. </p>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-k">require</span> <span class="pl-s1"><span class="pl-pds">'</span>phpDAVIDws/autoload.php<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s2"></span>
+<span class="pl-s2"><span class="pl-vo">$service</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-s3">DAVIDWebService</span>();</span>
+<span class="pl-s2"><span class="pl-vo">$email</span> <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">"</span>&lt;your email address&gt;<span class="pl-pds">"</span></span>;</span>
+<span class="pl-s2"></span>
+<span class="pl-s2"><span class="pl-vo">$request</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-s3">authenticate</span>(<span class="pl-vo">$email</span>);</span>
+<span class="pl-s2"></span>
+<span class="pl-s2"><span class="pl-c">//it will return a authenticateResponse object</span></span>
+<span class="pl-s2"><span class="pl-vo">$response</span> <span class="pl-k">=</span> <span class="pl-vo">$service</span><span class="pl-k">-&gt;</span>authenticate(<span class="pl-vo">$request</span>);</span>
+<span class="pl-s2"></span>
+<span class="pl-s2"><span class="pl-k">if</span>(<span class="pl-vo">$response</span><span class="pl-k">-&gt;</span>getReturn() <span class="pl-k">==</span> <span class="pl-s1"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>){</span>
+<span class="pl-s2">    <span class="pl-c">//perform anaotation</span></span>
+<span class="pl-s2">}</span>
+<span class="pl-s2"><span class="pl-k">else</span>{</span>
+<span class="pl-s2">    <span class="pl-c">//Register or check your email.</span></span>
+<span class="pl-s2">}</span>
+<span class="pl-s2"></span></pre></div>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
