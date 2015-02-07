@@ -1,7 +1,7 @@
 <?php
 
 
- function autoload_davidws($class)
+ function david_autoloader($class)
 {
     $classes = array(
         'DAVIDWebService' => __DIR__ .'/DAVIDWebService.php',
@@ -57,7 +57,7 @@
     };
 }
 
-spl_autoload_register('autoload_davidws');
+spl_autoload_register('david_autoloader');
 
 // Do nothing. The rest is just leftovers from the code generation.
 {

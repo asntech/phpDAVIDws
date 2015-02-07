@@ -8,7 +8,7 @@
 */
 
 //this will load all the necessary classes.
-require 'phpDAVIDws/autoload.php';
+require 'phpDAVIDws/david_autoloader.php';
 
 //A class will generated representing the service.
 $service = new DAVIDWebService();
