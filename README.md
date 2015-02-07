@@ -18,17 +18,17 @@ To install, simply download phpDAVIDws and include the autoload.php to where you
 
 ```php
 
-require 'phpDAVIDws/autoload.php';
+require 'phpDAVIDws/david_autoloader.php';
 
 ```
 ## How to use
 Users are required to register before using this service If you are a new user, please register at http://david.abcc.ncifcrf.gov/webservice/register.htm. 
      
 ```php
-require 'phpDAVIDws/autoload.php';
+require 'phpDAVIDws/david_autoloader.php';
 
 $service = new DAVIDWebService();
-$email = "<your email address>";
+$email = "yourname@yourorganization.org";
 
 $request = new authenticate($email);
 
