@@ -53,7 +53,7 @@ Hence we developed a class-based PHP interface to DAVID-WS.</p>
 <p>To install, simply download phpDAVIDws and include the autoload.php to where you want to use the service. </p>
 
 <div class="highlight highlight-php"><pre><span class="pl-s2"></span>
-<span class="pl-s2"><span class="pl-k">require</span> <span class="pl-s1"><span class="pl-pds">'</span>phpDAVIDws/autoload.php<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s2"><span class="pl-k">require</span> <span class="pl-s1"><span class="pl-pds">'</span>phpDAVIDws/david_autoloader.php<span class="pl-pds">'</span></span>;</span>
 <span class="pl-s2"></span></pre></div>
 
 <h2>
@@ -61,10 +61,10 @@ Hence we developed a class-based PHP interface to DAVID-WS.</p>
 
 <p>Users are required to register before using this service If you are a new user, please register at <a href="http://david.abcc.ncifcrf.gov/webservice/register.htm">http://david.abcc.ncifcrf.gov/webservice/register.htm</a>. </p>
 
-<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-k">require</span> <span class="pl-s1"><span class="pl-pds">'</span>phpDAVIDws/autoload.php<span class="pl-pds">'</span></span>;</span>
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-k">require</span> <span class="pl-s1"><span class="pl-pds">'</span>phpDAVIDws/david_autoloader.php<span class="pl-pds">'</span></span>;</span>
 <span class="pl-s2"></span>
 <span class="pl-s2"><span class="pl-vo">$service</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-s3">DAVIDWebService</span>();</span>
-<span class="pl-s2"><span class="pl-vo">$email</span> <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">"</span>&lt;your email address&gt;<span class="pl-pds">"</span></span>;</span>
+<span class="pl-s2"><span class="pl-vo">$email</span> <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">"</span>yourname@yourorganization.org<span class="pl-pds">"</span></span>;</span>
 <span class="pl-s2"></span>
 <span class="pl-s2"><span class="pl-vo">$request</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-s3">authenticate</span>(<span class="pl-vo">$email</span>);</span>
 <span class="pl-s2"></span>
