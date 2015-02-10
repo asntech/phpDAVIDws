@@ -8,7 +8,7 @@ that provides  tools for functional interpretation of large lists of genes/prote
 
 Recently, DAVID team developed a web service interface by giving a full control over all its functionalities (Jiao et al., 2012). 
 To connect and communicate with the David web service we need a client developed in a programming language of interest. 
-Some clients have been already made available including; Python, Perl, Matlab, Java (  Jiao et al., 2012) and R (ref). 
+Some clients have been already made available including; Python, Perl, Matlab, Java (  Jiao et al., 2012) and R (Fresno et al. 2013).
 PHP is one of most used web development programming language to develop online bioinformatics tools and a databases. 
 But, currently there is no PHP based client is available to access the DAVID web services. 
 Hence we developed a class-based PHP interface to DAVID-WS.

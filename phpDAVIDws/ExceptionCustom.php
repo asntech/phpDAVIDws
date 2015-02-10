@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * @package Exception
+ * @date 2015-02-01
+ * @author Aziz Khan
+ * @version 1.0
+ */
 class ExceptionCustom
 {
 
