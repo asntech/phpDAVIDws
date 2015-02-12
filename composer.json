@@ -1,5 +1,5 @@
 {
-    "name": "phpDAVIDws/phpDAVIDws",
+    "name": "phpdavidws/phpdavidws",
     "type": "library",
     "description": "A class-based PHP platform for DAVID web services",
     "keywords": ["david webservice", "gene ontalogy", "genomics", "proteomic"],
