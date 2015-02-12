@@ -78,12 +78,33 @@ class DAVIDWebService extends SoapClient
     ), $options);
       parent::__construct($wsdl, $options);
     }
-
+/*
+ 
+  getChartReport (generate chart report; arguments include threshold, count)
+  getConversionTypes (return all acceptable idTypes; no argument needed)
+  getCurrentList (return the position of current list; no argument needed)
+  getCurrentSpecies (return current species of the current list; no argument needed)
+  getCurrentPopulation (return the position of current background list; no argument needed)
+  getDefaultCategoryNames (return all default category names; no argument needed)
+  getGeneClusterReport (generate gene cluster report; arguments include overlap, initialSeed, finalSeed, linkage, kappa)
+  getGeneReportCategories(return gene report categories; no argument needed)
+  getListName (get the name of a list; argument is the position of the list)
+  getListReport (generate list report; no argument needed)
+  getSpecies (return species of the current list; no argument needed)
+  getSummaryReport (return a summary report; no argument needed)
+  getTableReport (generate table report; no argument needed)
+  getTermClusterReport (generate term cluster report; arguments include overlap, initialSeed, finalSeed, linkage, kappa)
+  setCurrentList (switch between gene lists; argument is the position of the list)
+  setCurrentPopulation (switch between background lists; argument is the position of the list)
+  setCurrentSpecies (select specie(s) to use; argument is a string of integers delimited by commas)
+  setCategories (let user select categories; argument is a string with category names delimited by commas; return a list of validated category names)
+  loadTesting (used by DAVID team; arguments include userName, reportTypes, listName, listType, idType, inputIds)
+ */
     /**
-     * It authenticates the use by email address
-     * If you are a new user, for registration go to http://david.abcc.ncifcrf.gov/webservice/register.htm
+     * It authenticates the user by email address
+     * If you are a new user, you can register at http://david.abcc.ncifcrf.gov/webservice/register.htm
      * @param authenticate $parameters
-     * @return authenticateResponse
+     * @return authenticateResponse - true if user has registered else return false
      */
     public function authenticate(authenticate $parameters)
     {
@@ -99,6 +120,7 @@ class DAVIDWebService extends SoapClient
     }
 
     /**
+     * return background names
      * @return getAllPopulationNamesResponse
      */
     public function getAllPopulationNames()
@@ -132,6 +154,7 @@ class DAVIDWebService extends SoapClient
     }
 
     /**
+     * This method return all list names
      * @return getAllListNamesResponse
      */
     public function getAllListNames()
@@ -149,6 +172,7 @@ class DAVIDWebService extends SoapClient
     }
 
     /**
+     * This method return all available annotation category names.
      * @return getAllAnnotationCategoryNamesResponse
      */
     public function getAllAnnotationCategoryNames()
@@ -267,6 +291,7 @@ class DAVIDWebService extends SoapClient
     }
 
       /**
+     * This add a list of genes or background to the current user session.
      * @param addList $parameters
      * @return addListResponse
      */

@@ -1,0 +1,24 @@
+{
+    "name": "phpDAVIDws/phpDAVIDws",
+    "type": "library",
+    "description": "A class-based PHP platform for DAVID web services",
+    "keywords": ["david webservice", "gene ontalogy", "genomics", "proteomic"],
+    "homepage": "http://asntech.github.io/phpDAVIDws",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aziz Khan",
+            "email": "azez.khan@gmail.com",
+            "homepage": "http://bioinfo.au.tsinghua.edu.cn/member/aziz/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "suggest": {
+        "ext-soap": "Please enable the soap extension in the php.ini"
+    },
+    "autoload": {
+        "psr-0": { "phpDAVIDws": "/" }
+    }
+}
