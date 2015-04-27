@@ -38,3 +38,5 @@ else{
 }
 
 ```
+## phpDAVIDws Documentation
+A detailed documentation can be found at: http://bioinfo.au.tsinghua.edu.cn/software/phpDAVIDws/doc/
